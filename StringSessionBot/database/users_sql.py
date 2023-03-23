@@ -15,7 +15,7 @@ class Users(BASE):
     #     return "<User {} {} {} ({})>".format(self.thumbnail, self.thumbnail_status, self.video_to, self.user_id)
 
 
-Users.__table__.create(checkfirst=True)
+Users.__table__.create(checkfirst=True,bind=True)
 
 
 async def num_users():
